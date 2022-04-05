@@ -8,7 +8,7 @@
 
 </br>
 
-![Database Structure](https://github.com/BetsolLLC/Todo-List/blob/main/Databases/assets/TodoDbStruct.png?raw=true "Database Structure")
+![Database Structure](https://github.com/BetsolLLC/campus-workshops-knowledge-base/blob/master/Databases/assets/TodoDbStruct.png?raw=true "Database Structure")
 
 ### Here we have identifiled that we need two tables one to describe the Todo items and another to describe the users who will be creating the Todo lists.It was possbible for us to have the user information in the Todo table itself, but it is always best practice to normalize our tables from the start and reduce redendencies. If we have the user infomation stored in we would have to repeat the user information in every Todo item that the user creates.Hence we will keep the user information in a separte table. We can have a column `user_id` which can store the id of the user who created the Todo item in the `TODO` table. This will become the foreign key to the `Users` table.
 
@@ -155,7 +155,7 @@ For each row in the table A, inner join compares the value in the pka column wit
 - In case these values are not equal, the inner join just ignores them and moves to the next row.
   The following Venn diagram illustrates how INNER JOIN clause works.
 
-![INNER JOIN](https://github.com/BetsolLLC/Todo-List/blob/main/Databases/assets/InnerJoin.png?raw=true " Inner Join")
+![INNER JOIN](https://github.com/BetsolLLC/campus-workshops-knowledge-base/blob/master/Databases/assets/InnerJoin.png?raw=true "Inner Join")
 
 Below is the syntax for the `JOIN` clause.
 
@@ -298,4 +298,4 @@ Almost everytime in modern application development all the above queries/functio
 
 Always take extra caution while executing delete and update statements in the database manually else you might get into a bad situation!
 
-![Database Structure](https://github.com/BetsolLLC/Todo-List/blob/main/Databases/assets/TodoDbStruct.png?raw=true "Database Structure")
+![Database Structure](https://github.com/BetsolLLC/campus-workshops-knowledge-base/blob/master/Databases/assets/DBDelete.jpg?raw=true "Database Structure")
