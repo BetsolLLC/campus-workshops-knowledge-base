@@ -40,16 +40,16 @@ Below are the command by which we can create the two tables:
 ```
 CREATE TABLE TODO
 (
-	id INT SERIAL PRIMARY KEY,
+   id INT SERIAL PRIMARY KEY,
    title VARCHAR(50) NOT NULL,
    complete BOOLEAN,
-  	date_modified TIMESTAMP
+   date_modified TIMESTAMP
 );
 
 CREATE TABLE Users
 (
-	id INT PRIMARY KEY,
-  	name VARCHAR(20)
+   id INT PRIMARY KEY,
+   name VARCHAR(20)
 );
 ```
 
