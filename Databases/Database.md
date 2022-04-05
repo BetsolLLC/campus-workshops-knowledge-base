@@ -295,3 +295,7 @@ Note that it is possible to remove multiple columns using the `DELETE` statement
 # Conclusion
 
 Almost everytime in modern application development all the above queries/functionalities are executed using `ORMs` which are code absractions for connecting and working with databases. But nevertheless it is important to understand how the different SQL statements and clauses work under the hood.
+
+Always take extra caution while executing delete and update statements in the database manually else you might get into a bad situation!
+
+![Database Structure](https://github.com/BetsolLLC/Todo-List/blob/main/Databases/assets/TodoDbStruct.png?raw=true "Database Structure")
