@@ -1,5 +1,5 @@
 # Install pgAdmin
-Donwload the latest version of pgAdmin: <br>
+Downoad the latest version of pgAdmin: <br>
 ```
 https://www.pgadmin.org/download/
 ```
