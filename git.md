@@ -167,18 +167,24 @@ It tells git which files (or patterns) it should ignore. It's usually used to av
 
 ## How to Use Branches in Git
 
+
 With branches, we can create a copy of a file we would like to work on without messing up the original copy. We can either merge these changes to the original copy or just let the branch remain independent. Visual representation of our repo
 
 ![17](https://user-images.githubusercontent.com/55580805/161747249-d9aa37da-9f44-4da4-9ee6-788994f740cd.png)
 
-At this point, I want to add more tasks to the list but I am not yet sure whether I want them on my main list. So, I will create a new branch called ‘test’ to see what my list would look like with more tasks included.
+At this point, I want to add more tasks to the list but I am not yet sure whether I want them on my main list. So, I will create a new branch called ‘test’ to see what my list would look like with more tasks includ . ed.
+
+To find out what branches are available and what the current branch name is, execute `git branch`.
+
+     $ git branch
+     main 
+     another_branch
 
 ### To create a new branch, run this command: 
 
      git checkout -b test
 
 ‘checkout’ tells Git it is supposed to switch to a new branch. ‘-b’ tells Git to create a new branch. ‘test’ is the name of the branch to be created.
-
 
 Now that we have a new branch created, this is what our repo will look like:
 
@@ -195,6 +201,11 @@ At this point, you will see all the changes made in the test branch reflected on
 ![21](https://user-images.githubusercontent.com/55580805/161747892-8f7f9aa0-7c8f-4e68-bb04-ff423241f161.png)
 
 The test branch will not be pushed. It will only remain in your local repo. If you would like to push your test branch, switch to the branch using `git checkout test` then run `git push -u origin test`
+
+
+### References
+
+1. https://medium.com/free-code-camp/learn-the-basics-of-git-in-under-10-minutes-da548267cc91
 
 
 
