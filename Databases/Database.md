@@ -10,7 +10,7 @@
 
 ![Database Structure](https://github.com/BetsolLLC/campus-workshops-knowledge-base/blob/master/Databases/assets/TodoDbStruct.png?raw=true "Database Structure")
 
-### Here we have identifiled that we need two tables one to describe the Todo items and another to describe the users who will be creating the Todo lists.It was possbible for us to have the user information in the Todo table itself, but it is always best practice to normalize our tables from the start and reduce redendencies. If we have the user infomation stored in we would have to repeat the user information in every Todo item that the user creates.Hence we will keep the user information in a separte table. We can have a column `user_id` which can store the id of the user who created the Todo item in the `TODO` table. This will become the foreign key to the `Users` table.
+### Here we have identifiled that we need two tables one to describe the Todo items and another to describe the users who will be creating the Todo lists.It was possbible for us to have the user information in the Todo table itself, but it is always best practice to normalize our tables from the start and reduce redendencies. If we have the user infomation stored in we would have to repeat the user information in every Todo item that the user creates.Hence we will keep the user information in a separte table. We can have a column `user_id` which can store the id of the user who created the Todo item in the `TODOApp` table. This will become the foreign key to the `Users` table.
 
 </br>
 
@@ -38,7 +38,7 @@ Using the above syntax let us create the tables based on our schema diagram.
 Below are the command by which we can create the two tables:
 
 ```
-CREATE TABLE TODO
+CREATE TABLE TODOApp
 (
    id INT SERIAL PRIMARY KEY,
    title VARCHAR(50) NOT NULL,
@@ -81,7 +81,7 @@ PostgreSQL provides you with many actions:
 Let us use the above syntax to add a new column to the Todo table with a foreign key reference to the Users table.
 
 ```
-ALTER TABLE TODO
+ALTER TABLE TODOApp
 ADD COLUMN user_id INT
 CONSTRAINT fk_user_id
 REFERENCES Users(id);
@@ -106,11 +106,11 @@ Using the able syntax let us insert the data to the `Todo` and the `Users` table
 INSERT INTO Users(id,name) VALUES (1,'John');
 INSERT INTO Users(id,name) VALUES (2,'Jack');
 INSERT INTO Users(id,name) VALUES (3,'Dan');
-INSERT INTO TODO(title,complete,date_modified,user_id) VALUES ('Day 1',false,CURRENT_TIMESTAMP,1);
-INSERT INTO TODO(title,complete,date_modified,user_id) VALUES ('Day 2',false,CURRENT_TIMESTAMP,1);
-INSERT INTO TODO(title,complete,date_modified,user_id) VALUES ('Day 3',false,CURRENT_TIMESTAMP,1);
-INSERT INTO TODO(title,complete,date_modified,user_id) VALUES ('Day 1',false,CURRENT_TIMESTAMP,2);
-INSERT INTO TODO(title,complete,date_modified,user_id) VALUES ('Day 4',false,CURRENT_TIMESTAMP,3);
+INSERT INTO TODOApp(title,complete,date_modified,user_id) VALUES ('Day 1',false,CURRENT_TIMESTAMP,1);
+INSERT INTO TODOApp(title,complete,date_modified,user_id) VALUES ('Day 2',false,CURRENT_TIMESTAMP,1);
+INSERT INTO TODOApp(title,complete,date_modified,user_id) VALUES ('Day 3',false,CURRENT_TIMESTAMP,1);
+INSERT INTO TODOApp(title,complete,date_modified,user_id) VALUES ('Day 1',false,CURRENT_TIMESTAMP,2);
+INSERT INTO TODOApp(title,complete,date_modified,user_id) VALUES ('Day 4',false,CURRENT_TIMESTAMP,3);
 ```
 
 Note that we did not have to specify the value for the `id` propertly as it is added automatically and incremented as rows are added.
@@ -134,7 +134,7 @@ WHERE condition;
 Let us update the `complete` field to `true` for one of the Todo item using the above syntax.
 
 ```
-UPDATE TODO SET complete=true,date_modified=CURRENT_TIMESTAMP WHERE id=1
+UPDATE TODOApp SET complete=true,date_modified=CURRENT_TIMESTAMP WHERE id=1
 ```
 
 </br>
@@ -174,7 +174,7 @@ Let us join the `Todo` table and the `Users` table using the foreign key `user_i
 
 ```
 SELECT t.title,u.name
-FROM TODO t
+FROM TODOApp t
 JOIN Users u ON t.user_id=u.id
 ```
 
@@ -190,7 +190,7 @@ Let us go a step further and and filter the result by a specific user using the 
 
 ```
 SELECT t.title,u.name
-FROM TODO t
+FROM TODOApp t
 JOIN Users u ON t.user_id=u.id
 WHERE u.name ='John'
 ORDER by t.date_modified desc
@@ -230,7 +230,7 @@ Below is the query for the same:
 
 ```
 SELECT COUNT(1) AS Total, u.name
-FROM TODO t
+FROM TODOApp t
 JOIN Users u ON t.user_id=u.id
 GROUP BY u.name
 ```
@@ -252,7 +252,7 @@ Let us use the `HAVING` to filter the group have `John` as the `username`.
 
 ```
 SELECT COUNT(1) AS Total, u.name
-FROM TODO t
+FROM TODOApp t
 JOIN Users u ON t.user_id=u.id
 GROUP BY u.name
 HAVING u.name = 'John'
@@ -270,7 +270,7 @@ After that we can add a condition in the `WHERE` clause to just have the items t
 
 ```
 SELECT COUNT(1) AS Total, u.name
-FROM TODO t
+FROM TODOApp t
 JOIN Users u ON t.user_id=u.id
 GROUP BY u.name,t.complete
 HAVING t.complete=true
@@ -282,10 +282,10 @@ HAVING t.complete=true
 
 Finally let us look at the DELETE statement which is used to remove data in the tables based on certain condition.
 
-Below is a query to delete a record in the `TODO` table having the `id` of 5
+Below is a query to delete a record in the `TODOApp` table having the `id` of 5
 
 ```
-DELETE FROM TODO WHERE id=5
+DELETE FROM TODOApp WHERE id=5
 ```
 
 Note that it is possible to remove multiple columns using the `DELETE` statement.
