@@ -1,3 +1,4 @@
+# Basics of Git
 
 ## What is Version Control?
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. So ideally, we can place any file in the computer on version control.
@@ -7,35 +8,29 @@ Here’s Why:
 A Version Control System (VCS) allows you to revert files back to a previous state, revert the entire project back to a previous state, review changes made over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more. Using a VCS also means that if you screw things up or lose files, you can generally recover easily.
 
 ## What is Git?
-
 Git is a version-control system for tracking changes in computer files and coordinating work on those files among multiple people. Git is a Distributed Version Control System. So Git does not necessarily rely on a central server to store all the versions of a project’s files. Instead, every user “clones” a copy of a repository (a collection of files) and has the full history of the project on their own hard drive. This clone has all of the metadata of the original while the original itself is stored on a self-hosted server or a third-party hosting service like GitHub.
 
 ## Difference between Git and GitHub
-
-
 Git and GitHub are two different things. Git is the version control system, while GitHub is a service for hosting Git repos that helps people collaborate on writing software. 
 
 ## Understanding Sections of a Git Project
-
-
-What is a Repository?
+### What is a Repository?
 A repository a.k.a. repo is nothing but a collection of source code.
 
 ![WorkFlow of Git](https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png)
 
 A Git project will have the following main sections:
-1.	The **working directory** is where a user makes local changes to a project. The working directory pulls the project’s files from the Git directory’s object database and places them on the user’s local machine.
+**Working Directory**
+The **working directory** is where a user makes local changes to a project. The working directory pulls the project’s files from the Git directory’s object database and places them on the user’s local machine.
 If you consider a file in your Working Directory, it can be in three possible state.
 •	It can be **staged**. This means the files with the updated changes are marked to be committed to the local repository but not yet committed.
 •	It can be **modified**. This means the files with the updated changes are not yet stored in the local repository.
 •	It can be **committed**. This means that the changes you made to your file are safely stored in the local repository.
 
-
-3.	 The **staging area** is a file (also called the “index”, “stage”, or “cache”) that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot of the files as they are and permanently stores that snapshot in the Git directory.
+**Staging Directory**
+The **staging area** is a file (also called the “index”, “stage”, or “cache”) that stores information about what will go into your next commit. A commit is when you tell Git to save these staged changes. Git takes a snapshot of the files as they are and permanently stores that snapshot in the Git directory.
 
 ## How to push a repository to GitHub
-
-
 ### Step 0 – Create a GitHub account
 To be able to use GitHub, you will have to create an account first. You can do that on the website:
 [http://github.com/](http://github.com/)
@@ -63,16 +58,13 @@ When we first initialized our project, the file was not being tracked by Git. To
     git add README.md
     # To add a specific file
 
-
 ### How to commit files in Git
-
 The next state for a file after the staged state is the committed state. 
 
      git commit -m "First commit"
      #The message in the " " is given so that the other users can read the message and see what changes you made
      
 The first part of the command git commit tells Git that all the files staged are ready to be committed so it is time to take a snapshot. The second part -m "first commit" is the commit message. -m is shorthand for message while the text inside the parenthesis is the commit message.
-
 
 The git push command pushes the changes in your local repository up to the remote repository you specified as the origin.
 
