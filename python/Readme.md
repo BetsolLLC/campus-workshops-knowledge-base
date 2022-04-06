@@ -141,6 +141,8 @@ pip install virtualenv
 ```
 virtualenv\_name/bin/activate
 ```
+![1](https://user-images.githubusercontent.com/102720146/161904204-27c1d820-b854-4b95-9ef2-c8040bf520f1.PNG)
+
 
 ## **Installing Postman:**
 
