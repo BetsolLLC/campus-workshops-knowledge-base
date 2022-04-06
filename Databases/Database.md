@@ -40,7 +40,7 @@ For our code integration let us create a table called TODO.
 ```
 CREATE TABLE TODO
 (
-   id INT PRIMARY KEY,
+   id SERIAL PRIMARY KEY,
    title VARCHAR(100),
    complete BOOLEAN,
    date_modified TIMESTAMP
