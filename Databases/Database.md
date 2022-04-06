@@ -35,12 +35,26 @@ CREATE TABLE [IF NOT EXISTS] table_name (
 
 Using the above syntax let us create the tables based on our schema diagram.
 
+For our code integration let us create a table called TODO.
+
+```
+CREATE TABLE TODO
+(
+   id INT PRIMARY KEY,
+   title VARCHAR(100),
+   complete BOOLEAN,
+   date_modified TIMESTAMP
+);
+```
+
+For our Database demonstration let us create two separate tables.
+
 Below are the command by which we can create the two tables:
 
 ```
 CREATE TABLE TODOApp
 (
-   id INT SERIAL PRIMARY KEY,
+   id  SERIAL PRIMARY KEY,
    title VARCHAR(50) NOT NULL,
    complete BOOLEAN,
    date_modified TIMESTAMP
