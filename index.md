@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## WHAT WILL WE BE LEARNING IN THE WORKSHOP? 
 
-You can use the [editor on GitHub](https://github.com/BetsolLLC/campus-workshops-knowledge-base/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We'll build a simple To-do app and deploy the database and backend on the cloud. We'll be using Python & Flask framework to build the backend, React JS to build the frontend, PostgreSQL for the database and finally Heroku to deploy our finished database and backend on the cloud. 
 
 ### Markdown
 
