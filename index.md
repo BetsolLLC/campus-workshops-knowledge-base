@@ -79,16 +79,16 @@ git add README.md
 # To add a specific file
 ```
 2. Commit files in Git: The next state for a file after the staged state is the committed state. 
-'''
+```
 git commit -m "First commit" 
 #The message in the " " is given so that the other users can read the message and see what changes you made 
-'''
+```
 3. The git push command pushes the changes in your local repository up to the remote repository you specified as the origin. 
 ```
 git push -u origin master #pushes changes to origin 
 ```
 
-**NOTE: Each time you make changes that you want to be reflected on GitHub, the following are the most common flow of commands: ** 
+**NOTE: Each time you make changes that you want to be reflected on GitHub, the following are the most common flow of commands:** 
 
 ```
   git add . 
@@ -96,7 +96,7 @@ git push -u origin master #pushes changes to origin
   git commit -m "Second commit" 
   git push -u origin master 
 ```  
-**Using Branches**  
+### Using Branches  
 - To check for all the branches in you project type 
 ```
   git branch 
@@ -109,5 +109,5 @@ git branch branchname
 ```
   git checkout branchnameyouwanttoswichto   
 ```
-### ** make sure that you have fork the campus-workshops-knowledge-base from BetsolLLC and clone it to your Local repository in your computer**
-### ** This Repository contains the Workshop Hands-on guide which you can use it for futher development of TO-DO App**
+**make sure that you have fork the campus-workshops-knowledge-base from BetsolLLC and clone it to your Local repository in your computer.
+This Repository contains the Workshop Hands-on guide which you can use it for futher development of TO-DO App**
