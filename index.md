@@ -51,9 +51,9 @@ ls
 ```
 10. Enter the folder by typing 
 ```
-cd Todo-Backend/ 
+cd campus-workshops-knowledge-base/ 
 ```
-11. Type the ls command to verify the files inside the Todo-backend folder 
+11. Type the ls command to verify the files inside the campus-workshops-knowledge-base folder 
 ```
 ls 
 ```
@@ -61,7 +61,8 @@ ls
 ```
 notepad README.md 
 ```
-**Note : If you are using git with your Github account for the first time then you can click on this [document](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) , which details the steps to configure your git settings so that you can start pulling and pushing data to your remote repository**
+
+**Note : If you are using git with your Github account for the first time then you can [click here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) , which details the steps to configure your git settings so that you can start pulling and pushing data to your remote repository**
 
 ### ADD AND COMMIT FILE  
 When we first initialized our project, the file was not being tracked by Git. To do that, we use this command 
@@ -86,7 +87,9 @@ git commit -m "First commit"
 ```
 git push -u origin master #pushes changes to origin 
 ```
+
 **NOTE: Each time you make changes that you want to be reflected on GitHub, the following are the most common flow of commands: ** 
+
 ```
   git add . 
   git status #Lists all new or modified files to be committed 
@@ -106,5 +109,5 @@ git branch branchname
 ```
   git checkout branchnameyouwanttoswichto   
 ```
-### ** make sure that you have fork the campus-workshops-knowledge-base from BetsolLLC and get a copy of this repository in your computer**
+### ** make sure that you have fork the campus-workshops-knowledge-base from BetsolLLC and clone it to your Local repository in your computer**
 ### ** This Repository contains the Workshop Hands-on guide which you can use it for futher development of TO-DO App**
