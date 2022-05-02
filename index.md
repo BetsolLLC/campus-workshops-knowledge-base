@@ -20,24 +20,29 @@ We'll build a simple To-do app and deploy the database and backend on the cloud.
 ### CONNECTING TO GITHUB AND CLONING THE APPLICATION DIRECTORY TO WORK WITH 
   Create a GitHub account 
   To be able to use GitHub, you will have to create an account first. You can do that on the website: http://github.com/ 
-  1. Add Your Global Username and email of Git hub using following command: 
-``` 
-git config --global user.name "firstName lastName"
-git config --global user.email "name@example.com" 
-```
- 
-2. Fork the repository which you want to work on. 
-   Click on the Fork button fork to copy the repository to your account. This will be essential for deployment to Heroku. 
-3. Goto your account and you can find the copy of your repository.
+1.  Login to Git Hub
+2. Fork the repository using https://github.com/BetsolLLC/campus-workshops-knowledge-base 
+   ,Click on the Fork button fork to copy the repository to your account. 
+   ![image](https://user-images.githubusercontent.com/47311332/166196562-a6e4d5d0-6a35-42b0-9b52-0da6a5ee07d3.png)
+3. Goto your account and you can find the copy of your repository and click on the campus-workshops-knowledge-base
+    
+    ![image](https://user-images.githubusercontent.com/47311332/166196241-7a3567ed-a0a7-4206-a1b4-57ae035d25f1.png)
+    ![image](https://user-images.githubusercontent.com/47311332/166196306-580ec304-5ff9-42ef-b097-8586ebb8882c.png)
 4. Click on the code and copy the link present in it.
-5. open the Git Bash
-6. Cloning a Git Repo: Locate to the directory you want to clone the repo:  
+    ![image](https://user-images.githubusercontent.com/47311332/166196490-b4774fb0-3125-48c0-949b-9c8896862561.png)
+5. open the Git Bash in your Desktop
+6. Type the following commandto register your name and mail 
+```
+git config --global user.name "Firstname Lastname"
+git config --global user.email "your_email@youremail.com"
+```
+7. Cloning a Git Repo: Locate to the directory you want to clone the repo:  
 ```
 cd D:/
 mkdir To-doApp 
 cd To-doApp 
 ```
-7. Copy the link of your repository which you want to work with: 
+7. Paste the Link which you have just copied from the Github Repo. 
 ```
 git clone Pastethelinkhere 
  ```
@@ -59,16 +64,15 @@ ls
 ```
 12. Edit a README.md file and save it.  
 ```
-notepad README.md 
+notepad README.md
+
 ```
 
 **Note : If you are using git with your Github account for the first time then you can [click here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) , which details the steps to configure your git settings so that you can start pulling and pushing data to your remote repository**
 
 ### ADD AND COMMIT FILE  
 When we first initialized our project, the file was not being tracked by Git. To do that, we use this command 
-'''
-git add . 
-'''
+**git add .**
 The period or dot that comes after add means all the files that exist in the repository. If you want to add a specific file, maybe one named about.txt, you use git add about.txt 
 1. Add files to the Staging Area for commit: 
 ```
