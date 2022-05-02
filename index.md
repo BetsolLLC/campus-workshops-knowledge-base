@@ -65,7 +65,6 @@ ls
 12. Edit a README.md file and save it.  
 ```
 notepad README.md
-
 ```
 
 **Note : If you are using git with your Github account for the first time then you can [click here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) , which details the steps to configure your git settings so that you can start pulling and pushing data to your remote repository**
@@ -91,9 +90,7 @@ git commit -m "First commit"
 ```
 git push -u origin master #pushes changes to origin 
 ```
-
 **NOTE: Each time you make changes that you want to be reflected on GitHub, the following are the most common flow of commands:** 
-
 ```
   git add . 
   git status #Lists all new or modified files to be committed 
