@@ -65,7 +65,7 @@ git config --global user.email "your_email@youremail.com"
 mkdir to-do-app 
 cd to-do-app 
 ```
-4. Using the `git clone` command clone the reposi
+4. Using the `git clone` command clone the repository
 ```
 git clone <copied-repo-link> 
  ```
