@@ -4,7 +4,7 @@ We will build a simple To-do app and deploy it on a popular cloud platform. In o
 
 ### Full Stack Technologies that you will learn
 - **Flask** a light-weight Python framework will be used to build a RESTful API which will serve as the backend
-- **ReactJS** as JavaScript framework will be used to build the frontend UI application
+- **ReactJS** as JavaScript library will be used to build the frontend UI application
 - **PostgreSQL** as a database engine managed by pgAdmin a Database Management System (DBMS).
 - **Heroku** a Platform-as-a-Service cloud platform to realise our full stack application as a whole.
 
@@ -46,7 +46,7 @@ We will build a simple To-do app and deploy it on a popular cloud platform. In o
     ![image](https://user-images.githubusercontent.com/47311332/166196490-b4774fb0-3125-48c0-949b-9c8896862561.png)
 
 ### About this repository [BetsolLLC/campus-workshops-knowledge-base](https://github.com/BetsolLLC/campus-workshops-knowledge-base)
-**This repository contains all the relevant guides and reference material you need to complete this Workshop.**
+**This repository contains all the relevant guides and reference material that you need to complete in this Workshop.**
 **It is important that you have forked the `BetsolLLC/campus-workshops-knowledge-base` repository into your GitHub Account before cloning it into you PC's local repository.**
 
 
